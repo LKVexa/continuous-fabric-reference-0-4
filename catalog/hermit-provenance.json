@@ -1,0 +1,578 @@
+{
+  "schema": "CFP_DERIVATION/1",
+  "files": [
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/auth.js",
+      "destination": "runtime/hermit/gateway/auth.js",
+      "source_sha256": "b984e7896482472e854b324c75574c81b869e0c5745d9b11cdc6cd83e1a84d4d",
+      "derived_sha256": "9161707ddadb61f55bdc924217cb7ee0afe7f6ba6a49212d2b7e76caee845c0e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/config.js",
+      "destination": "runtime/hermit/gateway/config.js",
+      "source_sha256": "c2f6a313c03789870db102f0ae87530841cb1dba01507bc739f2d23cb44bd3c5",
+      "derived_sha256": "c2f6a313c03789870db102f0ae87530841cb1dba01507bc739f2d23cb44bd3c5"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/connection.js",
+      "destination": "runtime/hermit/gateway/connection.js",
+      "source_sha256": "e7775876d4ec394c921313c70e09903c781c0a3b33fffbe148a38dcd256cd9ef",
+      "derived_sha256": "2055551c57b8ec3e577cd83694495d599f2e84322eafb05d6577ac1ba09baeea"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/log.js",
+      "destination": "runtime/hermit/gateway/log.js",
+      "source_sha256": "affeb7ee58b96c43aae7fa07348afb9043febd53b47b9aee4959d8fc3313c9ab",
+      "derived_sha256": "affeb7ee58b96c43aae7fa07348afb9043febd53b47b9aee4959d8fc3313c9ab"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/origin.js",
+      "destination": "runtime/hermit/gateway/origin.js",
+      "source_sha256": "d49e1c906b0c080c19f5c82575969f6e74671f2805e95d81e78979ba0e812e23",
+      "derived_sha256": "d49e1c906b0c080c19f5c82575969f6e74671f2805e95d81e78979ba0e812e23"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/server.js",
+      "destination": "runtime/hermit/gateway/server.js",
+      "source_sha256": "7ed65e37e9e9bf9a0c06e6881e6c56e34971ed5445481fe5e900d2cb5eeea5b3",
+      "derived_sha256": "7ed65e37e9e9bf9a0c06e6881e6c56e34971ed5445481fe5e900d2cb5eeea5b3"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/tickets.js",
+      "destination": "runtime/hermit/gateway/tickets.js",
+      "source_sha256": "a7ec8036b01a0d77eee4661296c470c0a7de06ffeca3d720694c4df8c4d09ff5",
+      "derived_sha256": "a7ec8036b01a0d77eee4661296c470c0a7de06ffeca3d720694c4df8c4d09ff5"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/worker-link.js",
+      "destination": "runtime/hermit/gateway/worker-link.js",
+      "source_sha256": "9e5dd02360df4a234055e1f3970dd7a5330e416f8b3df60c6ba5a38da5af9852",
+      "derived_sha256": "9e5dd02360df4a234055e1f3970dd7a5330e416f8b3df60c6ba5a38da5af9852"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/gateway/ws.js",
+      "destination": "runtime/hermit/gateway/ws.js",
+      "source_sha256": "588df0837bb07b28dded9d0d4ce4bef60669d8234e09db14aca74fdc83a63140",
+      "derived_sha256": "588df0837bb07b28dded9d0d4ce4bef60669d8234e09db14aca74fdc83a63140"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/worker/capabilities.js",
+      "destination": "runtime/hermit/worker/capabilities.js",
+      "source_sha256": "b9ae3d2ff734947910073d7accda6706f95c1c9def79e16a49a912455550abe2",
+      "derived_sha256": "b9ae3d2ff734947910073d7accda6706f95c1c9def79e16a49a912455550abe2"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/worker/core.js",
+      "destination": "runtime/hermit/worker/core.js",
+      "source_sha256": "9072f8404e628f9c31938da5e867ce7f2db918fa374e06d45ab1737fa59dbdce",
+      "derived_sha256": "d7108df59b0ef222fb7cf4f1eecdad4fabe575a36d52c42693c719d099551351"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/worker/fabric-lease.js",
+      "destination": "runtime/hermit/worker/fabric-lease.js",
+      "source_sha256": "9d9b365f9901e022b9bc0e4f6473e452d1fd240d037d9b91eeeb617b15b6a74e",
+      "derived_sha256": "9d9b365f9901e022b9bc0e4f6473e452d1fd240d037d9b91eeeb617b15b6a74e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/worker/host.js",
+      "destination": "runtime/hermit/worker/host.js",
+      "source_sha256": "f58b0f47b82e6851fa7628d079b087ac2bbe72ff1ed089cde2d9a30b613a3a2f",
+      "derived_sha256": "f58b0f47b82e6851fa7628d079b087ac2bbe72ff1ed089cde2d9a30b613a3a2f"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/worker/output-gate.js",
+      "destination": "runtime/hermit/worker/output-gate.js",
+      "source_sha256": "a6a0a57c1440f7e4d4fb7c7c02769831caa3a1db1eeab669a4a4a3b847fb1992",
+      "derived_sha256": "a6a0a57c1440f7e4d4fb7c7c02769831caa3a1db1eeab669a4a4a3b847fb1992"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/worker/thread.js",
+      "destination": "runtime/hermit/worker/thread.js",
+      "source_sha256": "4d3786d0bd2e921695610886f83cd54ed941b81a959071b9e806b59bb4856324",
+      "derived_sha256": "4d3786d0bd2e921695610886f83cd54ed941b81a959071b9e806b59bb4856324"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/protocol/bridge.js",
+      "destination": "runtime/hermit/protocol/bridge.js",
+      "source_sha256": "013dedb0678aea85911a7086db7a3f23b7bb7e943726d0d932972c085342a915",
+      "derived_sha256": "013dedb0678aea85911a7086db7a3f23b7bb7e943726d0d932972c085342a915"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/protocol/bridge.schema.json",
+      "destination": "runtime/hermit/protocol/bridge.schema.json",
+      "source_sha256": "a5d9ec38292e0eae4074e1cac0f3fe8ee131b56bbe33f91c47904218725bcb66",
+      "derived_sha256": "a5d9ec38292e0eae4074e1cac0f3fe8ee131b56bbe33f91c47904218725bcb66"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/protocol/codec.js",
+      "destination": "runtime/hermit/protocol/codec.js",
+      "source_sha256": "265aedca8ddda85ba81dba51b11ad57cd1e95bad233ecc10fbef1b18d5d762b8",
+      "derived_sha256": "265aedca8ddda85ba81dba51b11ad57cd1e95bad233ecc10fbef1b18d5d762b8"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/protocol/envelope.schema.json",
+      "destination": "runtime/hermit/protocol/envelope.schema.json",
+      "source_sha256": "340a0f34cc69c546ce8091a029b5509e53d32d3b1977db15fac132cadf8aa4d4",
+      "derived_sha256": "340a0f34cc69c546ce8091a029b5509e53d32d3b1977db15fac132cadf8aa4d4"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/protocol/protocol-meta.json",
+      "destination": "runtime/hermit/protocol/protocol-meta.json",
+      "source_sha256": "0a33802714673bb7b717259468f60e6faa9b18246448da70abf272a2fa356983",
+      "derived_sha256": "0a33802714673bb7b717259468f60e6faa9b18246448da70abf272a2fa356983"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/ram/allowance.js",
+      "destination": "runtime/hermit/ram/allowance.js",
+      "source_sha256": "d9acda8b6099a2e928088632f9c3fbbea07c0c9c5d0d2ce22053c1b95242505b",
+      "derived_sha256": "d9acda8b6099a2e928088632f9c3fbbea07c0c9c5d0d2ce22053c1b95242505b"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/ram/descriptor.js",
+      "destination": "runtime/hermit/ram/descriptor.js",
+      "source_sha256": "2871f9246c30a07f6639c2ea5c9dc2b8a173fe901704c382dd271d9400bbe24f",
+      "derived_sha256": "2871f9246c30a07f6639c2ea5c9dc2b8a173fe901704c382dd271d9400bbe24f"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/ram/descriptor.schema.json",
+      "destination": "runtime/hermit/ram/descriptor.schema.json",
+      "source_sha256": "3d4c0f6452f6605b55dadb1b04865737e2cb139a02c0ffb27e9058cd9f080c4d",
+      "derived_sha256": "3d4c0f6452f6605b55dadb1b04865737e2cb139a02c0ffb27e9058cd9f080c4d"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/ram/ledger.js",
+      "destination": "runtime/hermit/ram/ledger.js",
+      "source_sha256": "bfe17c63e3fed0e55c52887691c23e0d1ea5e6b9cbb53050a485c865ff24f2ce",
+      "derived_sha256": "bfe17c63e3fed0e55c52887691c23e0d1ea5e6b9cbb53050a485c865ff24f2ce"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/ram/residency.js",
+      "destination": "runtime/hermit/ram/residency.js",
+      "source_sha256": "eea28cd22724d39861b3373c7d88e67377fd4ad6b39ad08373b85450ead76b0c",
+      "derived_sha256": "eea28cd22724d39861b3373c7d88e67377fd4ad6b39ad08373b85450ead76b0c"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/ram/traffic.js",
+      "destination": "runtime/hermit/ram/traffic.js",
+      "source_sha256": "619eca5045136d3bafaecd8f3891d33a3db59bb6ae312ad01c351f218e1c8d8c",
+      "derived_sha256": "619eca5045136d3bafaecd8f3891d33a3db59bb6ae312ad01c351f218e1c8d8c"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/client/accessibility.js",
+      "destination": "runtime/hermit/client/accessibility.js",
+      "source_sha256": "f6dd1de61cd96cffec37fa614d2c3735ec5447435f2eebb79261761d3d4e474b",
+      "derived_sha256": "f6dd1de61cd96cffec37fa614d2c3735ec5447435f2eebb79261761d3d4e474b"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/client/boot.js",
+      "destination": "runtime/hermit/client/boot.js",
+      "source_sha256": "a4418c6029131eafc3f71389afe458823097e4a096947022a801f3f0ffd85ad1",
+      "derived_sha256": "a4418c6029131eafc3f71389afe458823097e4a096947022a801f3f0ffd85ad1"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/client/ipc-adapter.js",
+      "destination": "runtime/hermit/client/ipc-adapter.js",
+      "source_sha256": "d37df45aae680b6902f9478edac1ebc3613c348954944806cc5d750d51602667",
+      "derived_sha256": "d37df45aae680b6902f9478edac1ebc3613c348954944806cc5d750d51602667"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/client/transport.js",
+      "destination": "runtime/hermit/client/transport.js",
+      "source_sha256": "94ece72f4b2fafe8410676a431c6153e154b61da216a110f0c0f3c5828925f30",
+      "derived_sha256": "94ece72f4b2fafe8410676a431c6153e154b61da216a110f0c0f3c5828925f30"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/client/ws-adapter.js",
+      "destination": "runtime/hermit/client/ws-adapter.js",
+      "source_sha256": "bca0d57467cbfd2f4dbef1f1a9a18356e606dfc042f971d2a0befcd3fe94476e",
+      "derived_sha256": "bca0d57467cbfd2f4dbef1f1a9a18356e606dfc042f971d2a0befcd3fe94476e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/web/index.html",
+      "destination": "runtime/hermit/web/index.html",
+      "source_sha256": "1d818bbec3aacdec7267f9267ac477a11de54d240c7117f95db5d3e219c35686",
+      "derived_sha256": "1d818bbec3aacdec7267f9267ac477a11de54d240c7117f95db5d3e219c35686"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/web/web.css",
+      "destination": "runtime/hermit/web/web.css",
+      "source_sha256": "ab5f6a6c988f169a86af3727f8b200775c651b310ba6bbeea02606aeeab65995",
+      "derived_sha256": "ab5f6a6c988f169a86af3727f8b200775c651b310ba6bbeea02606aeeab65995"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/preload.js",
+      "destination": "runtime/hermit/src/preload.js",
+      "source_sha256": "c15fa56e9bb57dfea5907eba330db6333b7f4bed28187d2aa6a84ec9fec2b464",
+      "derived_sha256": "c15fa56e9bb57dfea5907eba330db6333b7f4bed28187d2aa6a84ec9fec2b464"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/browser-adapter.js",
+      "destination": "runtime/hermit/src/main/browser-adapter.js",
+      "source_sha256": "929c0062a5a04a639706325826e994c8cb54a3c088a9c8dd5e2929390e0fbaba",
+      "derived_sha256": "929c0062a5a04a639706325826e994c8cb54a3c088a9c8dd5e2929390e0fbaba"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/browser-pane.js",
+      "destination": "runtime/hermit/src/main/browser-pane.js",
+      "source_sha256": "016f249ad2177610f9381f51160de714324b1b2226595f8672c2121bbab06e1a",
+      "derived_sha256": "016f249ad2177610f9381f51160de714324b1b2226595f8672c2121bbab06e1a"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/ipc-guard.js",
+      "destination": "runtime/hermit/src/main/ipc-guard.js",
+      "source_sha256": "ae3e0f117d9427e22e0f5b57d04b4dc21247f62efb5e737e7751f791e3a688f8",
+      "derived_sha256": "ae3e0f117d9427e22e0f5b57d04b4dc21247f62efb5e737e7751f791e3a688f8"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/main.js",
+      "destination": "runtime/hermit/src/main/main.js",
+      "source_sha256": "e38c310f749a67747b2269de6e23b6e8d6c51689611f044b616ce59d09968349",
+      "derived_sha256": "e38c310f749a67747b2269de6e23b6e8d6c51689611f044b616ce59d09968349"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/nav-policy.js",
+      "destination": "runtime/hermit/src/main/nav-policy.js",
+      "source_sha256": "5db5e87c8de2df89062d0dac85ce3d72bad0dbf0aff85979cd136de9f5552255",
+      "derived_sha256": "5db5e87c8de2df89062d0dac85ce3d72bad0dbf0aff85979cd136de9f5552255"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/renderer/index.html",
+      "destination": "runtime/hermit/src/renderer/index.html",
+      "source_sha256": "d009bb5882293c694ff7415cd6797fbb71215935ba60e722c6f46199cf4c54e5",
+      "derived_sha256": "d009bb5882293c694ff7415cd6797fbb71215935ba60e722c6f46199cf4c54e5"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/renderer/renderer.js",
+      "destination": "runtime/hermit/src/renderer/renderer.js",
+      "source_sha256": "e2223fb9d2cff7daa8221d051ef8669ee3f588df0d542dfa92c7379a59cfd047",
+      "derived_sha256": "e2223fb9d2cff7daa8221d051ef8669ee3f588df0d542dfa92c7379a59cfd047"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/renderer/styles.css",
+      "destination": "runtime/hermit/src/renderer/styles.css",
+      "source_sha256": "054750cdb8a9d3a796cd77fb05b4e2023d6b472bf04e86fe8d7894164bac2553",
+      "derived_sha256": "054750cdb8a9d3a796cd77fb05b4e2023d6b472bf04e86fe8d7894164bac2553"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/env.js",
+      "destination": "runtime/hermit/src/main/spiral/env.js",
+      "source_sha256": "fcd9579cbab93942e2ea3d8679db9d2706ffb48f858ca76c99513ecd8b1bd43c",
+      "derived_sha256": "fcd9579cbab93942e2ea3d8679db9d2706ffb48f858ca76c99513ecd8b1bd43c"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/kernel.js",
+      "destination": "runtime/hermit/src/main/spiral/kernel.js",
+      "source_sha256": "2be7199b202a763623a374dacf4308974f212adf9d0c43b11b641dfaa5f5955c",
+      "derived_sha256": "2be7199b202a763623a374dacf4308974f212adf9d0c43b11b641dfaa5f5955c"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/line-reader.js",
+      "destination": "runtime/hermit/src/main/spiral/line-reader.js",
+      "source_sha256": "95cd5df52b2de2515c6dd5e41ae5a75ac4339e428438f184ee96104cd0a5b04c",
+      "derived_sha256": "95cd5df52b2de2515c6dd5e41ae5a75ac4339e428438f184ee96104cd0a5b04c"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/pipeline.js",
+      "destination": "runtime/hermit/src/main/spiral/pipeline.js",
+      "source_sha256": "36ff8f11bcba3405a9b67330ee4c56a39d094a1dac7085e27122432c331c6a96",
+      "derived_sha256": "36ff8f11bcba3405a9b67330ee4c56a39d094a1dac7085e27122432c331c6a96"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/registry.js",
+      "destination": "runtime/hermit/src/main/spiral/registry.js",
+      "source_sha256": "0004765855a55fddd037f23b1859448187e5e92f4d358566012ebaa2dede9bfd",
+      "derived_sha256": "0004765855a55fddd037f23b1859448187e5e92f4d358566012ebaa2dede9bfd"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/vfs.js",
+      "destination": "runtime/hermit/src/main/spiral/vfs.js",
+      "source_sha256": "c5814118daf128c4c9092fbd8e677ea3962d7bea79d688ff88955c5a1f1fb923",
+      "derived_sha256": "c5814118daf128c4c9092fbd8e677ea3962d7bea79d688ff88955c5a1f1fb923"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/browser.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/browser.js",
+      "source_sha256": "b71dce19a328268e209203533235e917af5df31fcb0757189d5f8150960a10d8",
+      "derived_sha256": "b71dce19a328268e209203533235e917af5df31fcb0757189d5f8150960a10d8"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/coreutils.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/coreutils.js",
+      "source_sha256": "e7f859684a7ddf8695c7f6643bcaca946ea25b9d1b6cc5ff67f07e7dbf27b161",
+      "derived_sha256": "e7f859684a7ddf8695c7f6643bcaca946ea25b9d1b6cc5ff67f07e7dbf27b161"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/dfabric.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/dfabric.js",
+      "source_sha256": "2acd35f2644f05997b90ce8407cd50e5d70a14b91188f4991f6b49f23aea72e3",
+      "derived_sha256": "2acd35f2644f05997b90ce8407cd50e5d70a14b91188f4991f6b49f23aea72e3"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/fs.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/fs.js",
+      "source_sha256": "fa339fa4364a282b892fd8615210430bcb40bb9baa91b5c28c147ec7eaac59f3",
+      "derived_sha256": "fa339fa4364a282b892fd8615210430bcb40bb9baa91b5c28c147ec7eaac59f3"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/index.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/index.js",
+      "source_sha256": "1a130dc8f642affc98990f7e2e9d1f35cd69d3ce2b795759a330c8f50fbc0202",
+      "derived_sha256": "1a130dc8f642affc98990f7e2e9d1f35cd69d3ce2b795759a330c8f50fbc0202"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/photon.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/photon.js",
+      "source_sha256": "99448bbadf85fd09ddbab02a2e515683894e95bba84120a2075f262ee5b4792e",
+      "derived_sha256": "99448bbadf85fd09ddbab02a2e515683894e95bba84120a2075f262ee5b4792e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/system.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/system.js",
+      "source_sha256": "54f35fd4cbea56d704687ab9a2e93369b6ac3ebcc19a828fb16ae64a976d32d8",
+      "derived_sha256": "54f35fd4cbea56d704687ab9a2e93369b6ac3ebcc19a828fb16ae64a976d32d8"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/commands/util.js",
+      "destination": "runtime/hermit/src/main/spiral/commands/util.js",
+      "source_sha256": "5f46364107a5cf959be6edc44739ab76aa086e708e1e4e84df482e9418bef91d",
+      "derived_sha256": "5f46364107a5cf959be6edc44739ab76aa086e708e1e4e84df482e9418bef91d"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/dfabric/locator.js",
+      "destination": "runtime/hermit/src/main/spiral/dfabric/locator.js",
+      "source_sha256": "1a04e6c9b3f9c77b5503536cf26e0bce851b4660a14c15264862ccba0eb80c2e",
+      "derived_sha256": "1a04e6c9b3f9c77b5503536cf26e0bce851b4660a14c15264862ccba0eb80c2e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/dfabric/policy.js",
+      "destination": "runtime/hermit/src/main/spiral/dfabric/policy.js",
+      "source_sha256": "3c75ddc39264a78fe47c78c5adaa8784a76caaf99f159b90c0b79bdc2ec53774",
+      "derived_sha256": "3c75ddc39264a78fe47c78c5adaa8784a76caaf99f159b90c0b79bdc2ec53774"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/dfabric/runner.js",
+      "destination": "runtime/hermit/src/main/spiral/dfabric/runner.js",
+      "source_sha256": "7dfc65518d247488257666bf9d21a57832bff5edaaeda16656e52b1b3849d748",
+      "derived_sha256": "7dfc65518d247488257666bf9d21a57832bff5edaaeda16656e52b1b3849d748"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/photon/client.js",
+      "destination": "runtime/hermit/src/main/spiral/photon/client.js",
+      "source_sha256": "85a47416a816fb0d6981071b96c58b31138721934e0ff2b27d555f10de625007",
+      "derived_sha256": "85a47416a816fb0d6981071b96c58b31138721934e0ff2b27d555f10de625007"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/main/spiral/photon/workflow.js",
+      "destination": "runtime/hermit/src/main/spiral/photon/workflow.js",
+      "source_sha256": "16432bfa53bfa8216cb3273cff78cbd1c54797bb5b6b85791b017d269ebbcc18",
+      "derived_sha256": "16432bfa53bfa8216cb3273cff78cbd1c54797bb5b6b85791b017d269ebbcc18"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/renderer/vt/parser.js",
+      "destination": "runtime/hermit/src/renderer/vt/parser.js",
+      "source_sha256": "18a4a7c61d18f21667be37af8ba5f4ae586e168e35825655f62627128e59740e",
+      "derived_sha256": "18a4a7c61d18f21667be37af8ba5f4ae586e168e35825655f62627128e59740e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/renderer/vt/renderer-canvas.js",
+      "destination": "runtime/hermit/src/renderer/vt/renderer-canvas.js",
+      "source_sha256": "835762bf66e95cd21d328da73f04eb7e459763676bc6b38952dc42b80d77f7cb",
+      "derived_sha256": "835762bf66e95cd21d328da73f04eb7e459763676bc6b38952dc42b80d77f7cb"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/src/renderer/vt/screen.js",
+      "destination": "runtime/hermit/src/renderer/vt/screen.js",
+      "source_sha256": "4a6030d451065946689d0e549a14c49ebf44efa3f896a00a4b11ccda5365af1c",
+      "derived_sha256": "4a6030d451065946689d0e549a14c49ebf44efa3f896a00a4b11ccda5365af1c"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/helpers.js",
+      "destination": "runtime/hermit/tests/helpers.js",
+      "source_sha256": "2b0304758bacf0d0df6f720d570ffd17561d1e26320152d841bca97ab91c0274",
+      "derived_sha256": "2b0304758bacf0d0df6f720d570ffd17561d1e26320152d841bca97ab91c0274"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/baseline/source_probe.js",
+      "destination": "runtime/hermit/tests/baseline/source_probe.js",
+      "source_sha256": "ea0ab2ca25b4848a86ce9ac3604ee096823ec063f55f2d66545b82bfe4635fbb",
+      "derived_sha256": "ea0ab2ca25b4848a86ce9ac3604ee096823ec063f55f2d66545b82bfe4635fbb"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/chaos/lifecycle.test.js",
+      "destination": "runtime/hermit/tests/chaos/lifecycle.test.js",
+      "source_sha256": "21dfd3184b394eced739abcab67268a621903f842f864522e40b3581edf6e154",
+      "derived_sha256": "21dfd3184b394eced739abcab67268a621903f842f864522e40b3581edf6e154"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/chaos/review-fixes.test.js",
+      "destination": "runtime/hermit/tests/chaos/review-fixes.test.js",
+      "source_sha256": "2df50fff07425e9c291ac17331502d910c25cd8f30310ce7d7ec3d062ccff4ac",
+      "derived_sha256": "2df50fff07425e9c291ac17331502d910c25cd8f30310ce7d7ec3d062ccff4ac"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/desktop-ipc/guard.test.js",
+      "destination": "runtime/hermit/tests/desktop-ipc/guard.test.js",
+      "source_sha256": "14c4fa18b4dab82e39772fb1b3a90cc4ed84c47379a8c70e572e215269ab9ded",
+      "derived_sha256": "14c4fa18b4dab82e39772fb1b3a90cc4ed84c47379a8c70e572e215269ab9ded"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/fabric/fabric-ws.test.js",
+      "destination": "runtime/hermit/tests/fabric/fabric-ws.test.js",
+      "source_sha256": "526c031a4588263a2a39e9d6228a0f83c9d4f899917b200c7990129b2f2f0883",
+      "derived_sha256": "526c031a4588263a2a39e9d6228a0f83c9d4f899917b200c7990129b2f2f0883"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/fabric/lease.test.js",
+      "destination": "runtime/hermit/tests/fabric/lease.test.js",
+      "source_sha256": "f0742afab9c1b098d5f728d79d4927c0461e44940d86f155cc5d3bce1d97154d",
+      "derived_sha256": "f0742afab9c1b098d5f728d79d4927c0461e44940d86f155cc5d3bce1d97154d"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/gateway/config.test.js",
+      "destination": "runtime/hermit/tests/gateway/config.test.js",
+      "source_sha256": "de311d33e365b1472e85bd92eb5f77ec09c72ef8206e7a302463a10b513c37e8",
+      "derived_sha256": "de311d33e365b1472e85bd92eb5f77ec09c72ef8206e7a302463a10b513c37e8"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/gateway/e2e.test.js",
+      "destination": "runtime/hermit/tests/gateway/e2e.test.js",
+      "source_sha256": "724ebb36c36c0b97ec9bf9f59833ffec8718915b28498af478e5ce99908ac91d",
+      "derived_sha256": "724ebb36c36c0b97ec9bf9f59833ffec8718915b28498af478e5ce99908ac91d"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/gateway/ws-conformance.test.js",
+      "destination": "runtime/hermit/tests/gateway/ws-conformance.test.js",
+      "source_sha256": "f45442b1f57e3fee52d768453353fccc10e04af9e01432c0370818e15bb0c3cd",
+      "derived_sha256": "f45442b1f57e3fee52d768453353fccc10e04af9e01432c0370818e15bb0c3cd"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/load/bench.js",
+      "destination": "runtime/hermit/tests/load/bench.js",
+      "source_sha256": "97c8a39fb447adbbf42bd66a7e19bcd0519d68791bc28e9b739a702c46534931",
+      "derived_sha256": "97c8a39fb447adbbf42bd66a7e19bcd0519d68791bc28e9b739a702c46534931"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/load/experiment.js",
+      "destination": "runtime/hermit/tests/load/experiment.js",
+      "source_sha256": "12f5528eea0dee392155999fb1fdf5577ca809f1b6c078f040ace2b95d3c2b32",
+      "derived_sha256": "12f5528eea0dee392155999fb1fdf5577ca809f1b6c078f040ace2b95d3c2b32"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/protocol/bridge.test.js",
+      "destination": "runtime/hermit/tests/protocol/bridge.test.js",
+      "source_sha256": "03defa2ef292718bb6c80b5760276fd32be846ca652b3a6f5e960746dc7cf341",
+      "derived_sha256": "03defa2ef292718bb6c80b5760276fd32be846ca652b3a6f5e960746dc7cf341"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/protocol/codec.test.js",
+      "destination": "runtime/hermit/tests/protocol/codec.test.js",
+      "source_sha256": "d94f6c25e86504ac25db274dc0e3b32db0a38e015a7b66398015d44965bf2f77",
+      "derived_sha256": "d94f6c25e86504ac25db274dc0e3b32db0a38e015a7b66398015d44965bf2f77"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/ram/descriptor.test.js",
+      "destination": "runtime/hermit/tests/ram/descriptor.test.js",
+      "source_sha256": "ce1dfe48d2d5fbef5470db1c0cd6dd19b155e2584d383512b1d6c80523412b14",
+      "derived_sha256": "ce1dfe48d2d5fbef5470db1c0cd6dd19b155e2584d383512b1d6c80523412b14"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/ram/ledger.test.js",
+      "destination": "runtime/hermit/tests/ram/ledger.test.js",
+      "source_sha256": "9c84cce6c7e23f723868d56b7f63f8a424ff94c8851afed0f4eae73d8fef83cc",
+      "derived_sha256": "9c84cce6c7e23f723868d56b7f63f8a424ff94c8851afed0f4eae73d8fef83cc"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/ram/v2-e2e.test.js",
+      "destination": "runtime/hermit/tests/ram/v2-e2e.test.js",
+      "source_sha256": "39962832253de8a71869c55ce533fa631e5fe56f7166afd18f72a532c83bc0cc",
+      "derived_sha256": "39962832253de8a71869c55ce533fa631e5fe56f7166afd18f72a532c83bc0cc"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/security/authz.test.js",
+      "destination": "runtime/hermit/tests/security/authz.test.js",
+      "source_sha256": "6d95d71ba2b7c59ef5e2c5759c9d07139b13628d7b0bc5e9a22d376851ef706b",
+      "derived_sha256": "6d95d71ba2b7c59ef5e2c5759c9d07139b13628d7b0bc5e9a22d376851ef706b"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/ui/browser.test.js",
+      "destination": "runtime/hermit/tests/ui/browser.test.js",
+      "source_sha256": "d6857b78db8f82dbe651d3b041274bf6a60aaa7544ef73848663e1aebfef5189",
+      "derived_sha256": "d6857b78db8f82dbe651d3b041274bf6a60aaa7544ef73848663e1aebfef5189"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/ui/client-units.test.js",
+      "destination": "runtime/hermit/tests/ui/client-units.test.js",
+      "source_sha256": "40e0499e8489012935cd617cde92c19152000b89798bb130ac756d78fe69e0f2",
+      "derived_sha256": "40e0499e8489012935cd617cde92c19152000b89798bb130ac756d78fe69e0f2"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/vectors/protocol-raw-invalid.json",
+      "destination": "runtime/hermit/tests/vectors/protocol-raw-invalid.json",
+      "source_sha256": "1a0e684613bb0e62301fac3204cdc59a367f5bbfc8f6b11d365be4827a9b633e",
+      "derived_sha256": "1a0e684613bb0e62301fac3204cdc59a367f5bbfc8f6b11d365be4827a9b633e"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/vectors/protocol-v2-invalid.json",
+      "destination": "runtime/hermit/tests/vectors/protocol-v2-invalid.json",
+      "source_sha256": "b19a389e3a3c78ae91ae7d044690ebff7adb7942ab27fb798a7f3a1cc192b2b6",
+      "derived_sha256": "b19a389e3a3c78ae91ae7d044690ebff7adb7942ab27fb798a7f3a1cc192b2b6"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/vectors/protocol-v2-valid.json",
+      "destination": "runtime/hermit/tests/vectors/protocol-v2-valid.json",
+      "source_sha256": "4b2346d8e30b3cd7fe7af4d40c91ae5ebfcccb86009542397d59dc4834d85055",
+      "derived_sha256": "4b2346d8e30b3cd7fe7af4d40c91ae5ebfcccb86009542397d59dc4834d85055"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/vt/vt.test.js",
+      "destination": "runtime/hermit/tests/vt/vt.test.js",
+      "source_sha256": "379c419a230847677968f5c1b36912d3aaa21a7ea4077be16482a532559fc1b2",
+      "derived_sha256": "379c419a230847677968f5c1b36912d3aaa21a7ea4077be16482a532559fc1b2"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/worker/kernel.test.js",
+      "destination": "runtime/hermit/tests/worker/kernel.test.js",
+      "source_sha256": "e751f678260bf54bb4bc14bfbb0abd7cfa1eeba4b9be341a160ba0a2be493c0d",
+      "derived_sha256": "e751f678260bf54bb4bc14bfbb0abd7cfa1eeba4b9be341a160ba0a2be493c0d"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/vectors/ramws/cases.json",
+      "destination": "runtime/hermit/tests/vectors/ramws/cases.json",
+      "source_sha256": "06b643e77da229b108d76a1489dc847ff505b33e997de38ba673164a29159598",
+      "derived_sha256": "06b643e77da229b108d76a1489dc847ff505b33e997de38ba673164a29159598"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/tests/vectors/ramws/valid.json",
+      "destination": "runtime/hermit/tests/vectors/ramws/valid.json",
+      "source_sha256": "0543174216cbe468a98f8257c5fecb36c076b19eb63687a73c5e6296f473962b",
+      "derived_sha256": "0543174216cbe468a98f8257c5fecb36c076b19eb63687a73c5e6296f473962b"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/LICENSE",
+      "destination": "runtime/hermit/LICENSE",
+      "source_sha256": "63748d1e0d8ac97258b42b6631100fed0ddcae97ebfb0274697e4623ffabaa09",
+      "derived_sha256": "639494a6562b33d3ef7a86639c04ebc117e561aaa739d8ea81a699eafcf72c5b"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/package.json",
+      "destination": "runtime/hermit/package.json",
+      "source_sha256": "b9c21a1218583a95c9940c3684e7d94c340e29fd0ecbeb1345657ddb25e47859",
+      "derived_sha256": "c30e151db27d9450f09f873e2a46b850490c774671bddd488a8e0cdfea6b6548"
+    },
+    {
+      "source": "hermit-ramws_2.0.0-ramws.1/README.md",
+      "destination": "runtime/hermit/README.md",
+      "source_sha256": "bb4e44e18e4a983b49a1cf90da7a72ace3fd10bc23e780b83a0fb8896a503899",
+      "derived_sha256": "476f3ee722908ccd12d387b692a98303d97f9ea8b499d0be77fb2cf6cc48738f"
+    }
+  ],
+  "patches": [
+    "gateway/connection.js: inject scoped bridge configuration",
+    "worker/core.js: register cfp virtual command"
+  ],
+  "authorship": "RUSSELL PHILIP SMITHSON",
+  "license": "Apache-2.0",
+  "audit_changes": [
+    "CFP 0.4.3: exact-token session revocation, confirmed author/licensing metadata, hosted-only dependency manifest, and LF text normalization. Original source hashes retained."
+  ]
+}

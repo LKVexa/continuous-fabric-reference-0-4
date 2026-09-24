@@ -1,0 +1,23 @@
+{
+  "name": "continuous-fabric-reference",
+  "version": "0.4.3",
+  "private": true,
+  "description": "Local hub synthesis with HERMIT RAMWS, pinned source adapters, and outbound compute agents",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "start": "node bin/cfp.js start",
+    "doctor": "node bin/cfp.js doctor",
+    "check": "node tools/check.js",
+    "verify": "node tools/verify.js",
+    "test": "node --test tests/*.test.js",
+    "test:hermit": "node --test runtime/hermit/tests/protocol/*.test.js runtime/hermit/tests/gateway/ws-conformance.test.js runtime/hermit/tests/security/*.test.js",
+    "test:all": "node tools/check.js && node --test tests/*.test.js && npm run test:hermit",
+    "release:manifest": "node tools/release.js",
+    "test:portable": "node --test tests/*.test.js runtime/hermit/tests/protocol/*.test.js runtime/hermit/tests/gateway/ws-conformance.test.js runtime/hermit/tests/security/*.test.js"
+  },
+  "author": "RUSSELL PHILIP SMITHSON",
+  "license": "Apache-2.0"
+}

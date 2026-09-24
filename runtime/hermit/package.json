@@ -1,0 +1,16 @@
+{
+  "name": "hermit-spiral-terminal",
+  "productName": "HERMIT",
+  "version": "2.0.0-ramws.1",
+  "description": "HERMIT hosted runtime subset for Continuous Fabric Reference",
+  "author": "RUSSELL PHILIP SMITHSON",
+  "license": "Apache-2.0",
+  "scripts": {
+    "gateway": "node gateway/server.js",
+    "test": "node --test tests/protocol/*.test.js tests/gateway/ws-conformance.test.js tests/security/*.test.js"
+  },
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "private": true
+}

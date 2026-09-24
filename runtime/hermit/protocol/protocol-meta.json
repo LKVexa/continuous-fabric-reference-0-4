@@ -1,0 +1,83 @@
+{
+ "protocol": "hermit.vws.v2",
+ "status": "IMPLEMENTED_IN_CANDIDATE",
+ "max_envelope_bytes": 65536,
+ "directions": {
+  "client_to_server": [
+   "session.open",
+   "terminal.resize",
+   "terminal.signal",
+   "session.close",
+   "flow.credit",
+   "heartbeat.ping",
+   "heartbeat.pong"
+  ],
+  "server_to_client": [
+   "hello",
+   "session.reset",
+   "session.opened",
+   "request.ack",
+   "input.ack",
+   "session.exit",
+   "heartbeat.ping",
+   "heartbeat.pong",
+   "service.draining",
+   "error"
+  ]
+ },
+ "binary": {
+  "header_bytes": 7,
+  "layout": "byte0 kind | bytes1..6 uint48 big-endian seq | bytes7.. raw terminal bytes",
+  "kinds": {
+   "input": 1,
+   "output": 2
+  },
+  "direction": {
+   "input": "client_to_server",
+   "output": "server_to_client"
+  },
+  "payload_caps": {
+   "input": 8192,
+   "output": 16384
+  },
+  "zero_length": "rejected as BAD_MESSAGE (a data message always carries at least one byte; end of session is session.exit/Close, never an empty payload)",
+  "seq": "starts at 1, strictly +1 per direction per session; uint48 is exactly representable in an ECMAScript Number (2^48 < 2^53); the connection is ended before 2^48-1"
+ },
+ "kit_kind_map": {
+  "OPEN": "session.open",
+  "INPUT": "binary kind 1",
+  "OUTPUT": "binary kind 2",
+  "RESIZE": "terminal.resize",
+  "SIGNAL": "terminal.signal",
+  "CLOSE": "session.close",
+  "CREDIT": "flow.credit",
+  "ACK": "input.ack (ACK_ACCEPTED/ACK_EXECUTED), request.ack, flow.credit.consumedSeq (ACK_CONSUMED)",
+  "ERROR": "error",
+  "SESSION_RESET": "session.reset"
+ },
+ "ack_semantics": {
+  "acceptedSeq": "highest input seq accepted into this process's bounded RAM \u2014 not executed, not durable",
+  "executedSeq": "highest input seq that had been delivered to the shell when a command line last COMPLETED under this epoch",
+  "consumedSeq": "highest contiguous output seq the client has handed to its renderer"
+ },
+ "credit": {
+  "creditBytes": "cumulative total of output payload bytes the client has authorized for this session; the server sends output only while sentBytes + next <= creditBytes",
+  "rules": [
+   "monotone non-decreasing",
+   "creditBytes - consumedBytes(consumedSeq) <= limits.maxCreditWindowBytes",
+   "consumedSeq <= last output seq sent",
+   "violations -> error CREDIT_VIOLATION and close 1008"
+  ]
+ },
+ "not_schema_enforced": [
+  "authentication",
+  "Origin policy",
+  "sid/epoch ownership",
+  "sequence monotonicity",
+  "credit arithmetic",
+  "rate limits",
+  "ledger admission",
+  "open-before-output ordering",
+  "single exit"
+ ]
+}

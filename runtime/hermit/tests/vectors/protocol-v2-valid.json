@@ -1,0 +1,242 @@
+[
+ {
+  "id": "hello",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "hello",
+   "payload": {
+    "protocol": "hermit.vws.v2",
+    "serverEpoch": "eeeeeeeeeeeeeeee",
+    "profile": "LOCAL_VOLATILE",
+    "limits": {
+     "envelopeBytes": 65536,
+     "inputBytes": 8192,
+     "outputChunkBytes": 16384,
+     "maxCreditWindowBytes": 1048576,
+     "maxSessions": 4
+    },
+    "capabilities": {
+     "resume": false,
+     "browserPane": false,
+     "virtualCommands": true,
+     "fabric": false
+    }
+   }
+  }
+ },
+ {
+  "id": "open",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.open",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "cols": 80,
+    "rows": 24,
+    "mode": "virtual",
+    "creditBytes": 65536
+   }
+  }
+ },
+ {
+  "id": "open-prev",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.open",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "cols": 80,
+    "rows": 24,
+    "mode": "virtual",
+    "creditBytes": 65536,
+    "previous": {
+     "sid": "ssssssssssssssssssssss",
+     "epoch": "eeeeeeeeeeeeeeee",
+     "pendingInputs": 2
+    }
+   }
+  }
+ },
+ {
+  "id": "reset",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "session.reset",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "reason": "process_restart",
+    "outcome": "OUTCOME_UNKNOWN",
+    "previousEpoch": "eeeeeeeeeeeeeeee",
+    "pendingInputs": 2
+   }
+  }
+ },
+ {
+  "id": "opened",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "session.opened",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "cols": 80,
+    "rows": 24
+   }
+  }
+ },
+ {
+  "id": "resize",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "terminal.resize",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "cols": 132,
+    "rows": 43
+   }
+  }
+ },
+ {
+  "id": "signal",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "terminal.signal",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "signal": "SIGINT"
+   }
+  }
+ },
+ {
+  "id": "rack",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "request.ack",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "operation": "terminal.resize",
+    "stage": "accepted"
+   }
+  }
+ },
+ {
+  "id": "iack",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "input.ack",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "acceptedSeq": 10,
+    "executedSeq": 9
+   }
+  }
+ },
+ {
+  "id": "credit",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "flow.credit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "consumedSeq": 5,
+    "creditBytes": 1048576
+   }
+  }
+ },
+ {
+  "id": "close",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.close",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "reason": "user"
+   }
+  }
+ },
+ {
+  "id": "exit",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "session.exit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "code": 0,
+    "reason": "closed"
+   }
+  }
+ },
+ {
+  "id": "ping",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "heartbeat.ping",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "nonce": "nnnnnnnnnnnnnnnn"
+   }
+  }
+ },
+ {
+  "id": "pong",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "heartbeat.pong",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "nonce": "nnnnnnnnnnnnnnnn"
+   }
+  }
+ },
+ {
+  "id": "drain",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "service.draining",
+   "payload": {
+    "deadlineMs": 19000,
+    "reason": "deploy"
+   }
+  }
+ },
+ {
+  "id": "error",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "error",
+   "payload": {
+    "code": "CREDIT_VIOLATION",
+    "message": "x",
+    "retryable": false
+   }
+  }
+ }
+]

@@ -1,0 +1,52 @@
+{
+  "schema": "CFP_BUILD_EVIDENCE/1",
+  "date": "2026-09-23",
+  "release": "0.4.1",
+  "version": "0.4.1",
+  "environment": {
+    "os": "Windows",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "CFP_SOURCE_ROOT": "<source-root>"
+  },
+  "reference_tests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "total": 18,
+    "skipped_reason": null,
+    "evidence": "docs/reference-test-results.txt"
+  },
+  "referenceTests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "total": 18
+  },
+  "hermit_selected_regressions": {
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0,
+    "command": "npm run test:hermit"
+  },
+  "bound_python_files_pinned": 8,
+  "bound_python_matched": 8,
+  "browser_smoke": "PASS scripted HTTP sign-in + config.json",
+  "physical_mobile": "NOT_RUN",
+  "physical_cloud": "NOT_RUN",
+  "encrypted_custody": "PASS",
+  "backup_restore": "PASS",
+  "production_go": false,
+  "local_operator_go": true,
+  "reference_production_go": true,
+  "scoped_go": "CFP_LOCAL_HUB_GO",
+  "result": "NO_GO",
+  "result_note": "Full G7 NO_GO; scoped CFP_LOCAL_HUB_GO / local_operator_go true",
+  "release_gate": "tools/check.js",
+  "donor_promotions": [],
+  "javascript_syntax": {
+    "files": 90,
+    "failures": 0
+  },
+  "derived_hermit_files": 94
+}

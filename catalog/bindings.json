@@ -1,0 +1,38 @@
+{
+  "schema": "CFP_BINDINGS/1",
+  "source_root": "../stockpiles",
+  "files": {
+    "scheduler": {
+      "path": "sch01_workload_classification_and_runtime_placem_v4.3.0/sch01_workload_classification_and_runtime_placem/engine.py",
+      "sha256": "237d4b642eaf6805d19142654de155a3799cf218123ab821f23a85227b5faa72"
+    },
+    "replication": {
+      "path": "gap05_state_replication_consistency_model_v4.3.0_production_layer/gap05_state_replication_consistency_model/model.py",
+      "sha256": "d2f360b7cf3aca0536d6b7c91da225a2e83bb2693cfaaf82578fb27f44d74cd7"
+    },
+    "model/__init__.py": {
+      "path": "_model/reasoning_center/__init__.py",
+      "sha256": "6cd5c337388e3aa5338d87e0021a286a97c51a259a1b1fe5f74bb0a3e927ff2c"
+    },
+    "model/evaluation.py": {
+      "path": "_model/reasoning_center/evaluation.py",
+      "sha256": "400e41389cbc641cc04c62eeabd5d41d852b7c87ae414af63d8ead88175501d1"
+    },
+    "model/contracts.py": {
+      "path": "_model/reasoning_center/contracts.py",
+      "sha256": "4dcef9f30fba62a34376ba457d37ac293b80bc70c8e0b81b4e332ce11c513bce"
+    },
+    "model/vendor/__init__.py": {
+      "path": "_model/reasoning_center/vendor/__init__.py",
+      "sha256": "6cd5c337388e3aa5338d87e0021a286a97c51a259a1b1fe5f74bb0a3e927ff2c"
+    },
+    "model/vendor/agentark_scoring.py": {
+      "path": "_model/reasoning_center/vendor/agentark_scoring.py",
+      "sha256": "693f114406af14a9543e5dee3d9e72bfa9f065a835410e1dc66cef58f688faa9"
+    },
+    "model/vendor/agentark_numeric.py": {
+      "path": "_model/reasoning_center/vendor/agentark_numeric.py",
+      "sha256": "dd1f6b674bb3817b827e850a8c0c8491ec172488e8df526f77e8fa7fa43d2fac"
+    }
+  }
+}

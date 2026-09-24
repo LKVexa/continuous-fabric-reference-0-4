@@ -1,0 +1,17 @@
+[
+ {
+  "id": "DUPLICATE_KEY",
+  "raw": "{\"v\":2,\"v\":2,\"type\":\"heartbeat.ping\",\"rid\":\"rrrrrrrrrrrrrrrr\",\"payload\":{\"nonce\":\"nnnnnnnnnnnnnnnn\"}}",
+  "direction": "client_to_server"
+ },
+ {
+  "id": "JSON_NONFINITE",
+  "raw": "{\"v\":NaN,\"type\":\"heartbeat.ping\",\"rid\":\"rrrrrrrrrrrrrrrr\",\"payload\":{\"nonce\":\"nnnnnnnnnnnnnnnn\"}}",
+  "direction": "client_to_server"
+ },
+ {
+  "id": "TRUNCATED_JSON",
+  "raw": "{\"v\":2",
+  "direction": "client_to_server"
+ }
+]

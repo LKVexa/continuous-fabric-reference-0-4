@@ -1,0 +1,289 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "Operator",
+    "Buffers",
+    "Formats",
+    "Budget",
+    "Ownership",
+    "Completion",
+    "Quality",
+    "Backend"
+  ],
+  "properties": {
+    "Operator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "schema_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "enum": [
+            "receive",
+            "send",
+            "input",
+            "output",
+            "resize",
+            "signal",
+            "close"
+          ]
+        },
+        "schema_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "ramws.internal.v1"
+        }
+      }
+    },
+    "Buffers": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "handle",
+          "generation",
+          "offset",
+          "length",
+          "capacity",
+          "access"
+        ],
+        "properties": {
+          "handle": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "generation": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9223372036854775807
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9223372036854775807
+          },
+          "length": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9223372036854775807
+          },
+          "capacity": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9223372036854775807
+          },
+          "access": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "enum": [
+              "read",
+              "write"
+            ]
+          }
+        }
+      }
+    },
+    "Formats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "payload",
+        "wire_schema",
+        "lossless"
+      ],
+      "properties": {
+        "payload": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "enum": [
+            "utf-8",
+            "binary",
+            "none"
+          ]
+        },
+        "wire_schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "ramws.v1"
+        },
+        "lossless": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "Budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope",
+        "reservation_bytes",
+        "session_limit_bytes"
+      ],
+      "properties": {
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "session"
+        },
+        "reservation_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "session_limit_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        }
+      }
+    },
+    "Ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "principal_id",
+        "session_id",
+        "server_epoch",
+        "owner",
+        "mutability"
+      ],
+      "properties": {
+        "principal_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "server_epoch": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "enum": [
+            "transport",
+            "runtime",
+            "terminal"
+          ]
+        },
+        "mutability": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "enum": [
+            "immutable",
+            "exclusive_mutable"
+          ]
+        }
+      }
+    },
+    "Completion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fence_handle",
+        "release_policy"
+      ],
+      "properties": {
+        "fence_handle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "release_policy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "last_local_consumer_complete"
+        }
+      }
+    },
+    "Quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "payload_fidelity",
+        "ordered",
+        "oracle"
+      ],
+      "properties": {
+        "payload_fidelity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "exact"
+        },
+        "ordered": {
+          "type": "boolean",
+          "const": true
+        },
+        "oracle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "protocol+terminal-reference-v1"
+        }
+      }
+    },
+    "Backend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "executor",
+        "runtime_id",
+        "plan_id"
+      ],
+      "properties": {
+        "profile": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "LOCAL_VOLATILE"
+        },
+        "executor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "const": "cpu"
+        },
+        "runtime_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "plan_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RAMWS internal descriptor planning fixture",
+  "description": "New adaptation of A01 Table 8. Not a wire schema or a runtime admission implementation."
+}

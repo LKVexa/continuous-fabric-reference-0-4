@@ -1,0 +1,19 @@
+/* WEB profile additions on top of the house stylesheet (src/renderer/styles.css). */
+#titlebar { -webkit-app-region: no-drag; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: pre; border: 0; }
+#signin { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(8, 11, 15, .86); backdrop-filter: blur(6px); }
+#signin[hidden] { display: none; }
+#signin form { width: min(440px, calc(100vw - 48px)); padding: 28px; border: 1px solid var(--graphite-4, #2a313b); border-radius: 10px; background: var(--graphite-1, #0f1318); box-shadow: 0 24px 80px rgba(0, 0, 0, .55); color: var(--ice, #d5dde6); font: 14px/1.5 system-ui, sans-serif; }
+#signin h1 { margin: 0 0 4px; font-size: 18px; letter-spacing: .06em; color: var(--cyan-bright, #4fe3f0); }
+#signin p { margin: 0 0 16px; opacity: .75; }
+#signin label { display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; opacity: .7; }
+#signin input { width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 6px; border: 1px solid var(--graphite-4, #2a313b); background: #080b0f; color: inherit; font: 13px ui-monospace, monospace; }
+#signin input:focus-visible, #signin button:focus-visible, canvas:focus-visible { outline: 2px solid var(--cyan, #22c3d6); outline-offset: 2px; }
+#signin button { margin-top: 14px; padding: 9px 16px; border: 0; border-radius: 6px; background: var(--cyan, #22c3d6); color: #061014; font-weight: 600; cursor: pointer; }
+#signin-msg { min-height: 1.4em; margin-top: 10px; color: #ffb454; }
+#st-conn[data-state="active"] { color: var(--cyan-bright, #4fe3f0); }
+#st-conn[data-state="reconnecting"], #st-conn[data-state="draining"] { color: #ffb454; }
+#st-conn[data-state="error"], #st-conn[data-state="auth-required"], #st-conn[data-state="protocol-error"] { color: #ff6b6b; }
+.tab.reconnecting .name::after { content: " ⟳"; }
+#signout { background: none; border: 1px solid var(--graphite-4, #2a313b); color: inherit; border-radius: 4px; padding: 2px 8px; cursor: pointer; font: inherit; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

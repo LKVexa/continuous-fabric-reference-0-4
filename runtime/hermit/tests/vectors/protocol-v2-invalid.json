@@ -1,0 +1,228 @@
+[
+ {
+  "id": "v1",
+  "direction": "client_to_server",
+  "message": {
+   "v": 1,
+   "type": "session.open",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "cols": 80,
+    "rows": 24,
+    "mode": "virtual",
+    "creditBytes": 1
+   }
+  }
+ },
+ {
+  "id": "old-input",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "terminal.input",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "seq": 1,
+    "data": "AA=="
+   }
+  }
+ },
+ {
+  "id": "old-output-ack",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "output.ack",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "seq": 1
+   }
+  }
+ },
+ {
+  "id": "neg-cols",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "terminal.resize",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "cols": -3,
+    "rows": 24
+   }
+  }
+ },
+ {
+  "id": "credit-neg",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "flow.credit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "consumedSeq": -1,
+    "creditBytes": 10
+   }
+  }
+ },
+ {
+  "id": "credit-unsafe",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "flow.credit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "consumedSeq": 0,
+    "creditBytes": 9007199254740992
+   }
+  }
+ },
+ {
+  "id": "credit-float",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "flow.credit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "consumedSeq": 0.5,
+    "creditBytes": 10
+   }
+  }
+ },
+ {
+  "id": "epoch-int",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.close",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": 1,
+   "payload": {
+    "reason": "user"
+   }
+  }
+ },
+ {
+  "id": "sid-no-epoch",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.close",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "sid": "ssssssssssssssssssssss",
+   "payload": {
+    "reason": "user"
+   }
+  }
+ },
+ {
+  "id": "unknown-field",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.open",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "cols": 80,
+    "rows": 24,
+    "mode": "virtual",
+    "creditBytes": 1,
+    "pointer": 1
+   }
+  }
+ },
+ {
+  "id": "client-sends-hello",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "hello",
+   "payload": {
+    "protocol": "hermit.vws.v2",
+    "serverEpoch": "eeeeeeeeeeeeeeee",
+    "profile": "LOCAL_VOLATILE",
+    "limits": {
+     "envelopeBytes": 65536,
+     "inputBytes": 8192,
+     "outputChunkBytes": 16384,
+     "maxCreditWindowBytes": 1048576,
+     "maxSessions": 4
+    },
+    "capabilities": {
+     "resume": false,
+     "browserPane": false,
+     "virtualCommands": true,
+     "fabric": false
+    }
+   }
+  }
+ },
+ {
+  "id": "server-sends-credit",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "flow.credit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "consumedSeq": 5,
+    "creditBytes": 1048576
+   }
+  }
+ },
+ {
+  "id": "bad-reset-reason",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "session.reset",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "reason": "oops",
+    "outcome": "OUTCOME_UNKNOWN",
+    "previousEpoch": "eeeeeeeeeeeeeeee",
+    "pendingInputs": 0
+   }
+  }
+ },
+ {
+  "id": "exit-code-256",
+  "direction": "server_to_client",
+  "message": {
+   "v": 2,
+   "type": "session.exit",
+   "sid": "ssssssssssssssssssssss",
+   "epoch": "eeeeeeeeeeeeeeee",
+   "payload": {
+    "code": 256,
+    "reason": "closed"
+   }
+  }
+ },
+ {
+  "id": "missing-credit",
+  "direction": "client_to_server",
+  "message": {
+   "v": 2,
+   "type": "session.open",
+   "rid": "rrrrrrrrrrrrrrrr",
+   "payload": {
+    "cols": 80,
+    "rows": 24,
+    "mode": "virtual"
+   }
+  }
+ }
+]

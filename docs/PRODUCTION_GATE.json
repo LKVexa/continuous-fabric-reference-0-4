@@ -1,0 +1,201 @@
+{
+  "schema": "CFP_PRODUCTION_GATE/1",
+  "release": "0.4.2",
+  "date": "2026-09-23",
+  "timezone_note": "America/Los_Angeles",
+  "production_go": false,
+  "result": "NO_GO",
+  "local_operator_go": true,
+  "reference_production_go": true,
+  "scoped_go": "CFP_LOCAL_HUB_GO",
+  "scoped_go_meaning": "Single-hub local/operator deployment with encrypted custody, backup/restore, software attestation seam (not TPM), local SLO scaffold, local upgrade dry-run, donor-bound suite green, engineering self-review done. Internet-facing / multi-hub / hardware-attested production remains NO_GO.",
+  "criteria": [
+    {
+      "id": "G0_source_identity",
+      "name": "Source identity / bindings",
+      "status": "PASS",
+      "evidence": [
+        "catalog/bindings.json",
+        "docs/reference-test-results.txt",
+        "doctor HASH_MATCH x8"
+      ]
+    },
+    {
+      "id": "G1_terminal_bridge",
+      "name": "Terminal bridge + browser smoke",
+      "status": "PASS",
+      "evidence": [
+        "tests/fabric.test.js hermit e2e",
+        "browser smoke HTTP sign-in + config.json"
+      ]
+    },
+    {
+      "id": "G2_single_cell",
+      "name": "Single-cell compute (donors bound)",
+      "status": "PASS",
+      "evidence": [
+        "docs/reference-test-results.txt"
+      ]
+    },
+    {
+      "id": "G3_two_physical_hosts",
+      "name": "Two physical hosts over TLS",
+      "status": "BLOCKED",
+      "tier_note": "PASS(local) dual-loopback generated-cert drill only",
+      "evidence": [
+        "two-instance loopback TLS test",
+        "Not executed on two physical hosts"
+      ]
+    },
+    {
+      "id": "G4_mobile_physical",
+      "name": "Physical iOS/Android acceptance",
+      "status": "BLOCKED",
+      "evidence": [
+        "physical_mobile: NOT_RUN"
+      ]
+    },
+    {
+      "id": "G5_df_runtime",
+      "name": "DF/runtime promotion",
+      "status": "BLOCKED",
+      "evidence": [
+        "Sealed DF members not promoted"
+      ]
+    },
+    {
+      "id": "G6_continuous_services",
+      "name": "GAP-04/05/06/07/12/13/14/15 service adapters",
+      "status": "BLOCKED",
+      "evidence": [
+        "GAP-05 merge callable only; GAP-06 software seam only; policy authority absent"
+      ]
+    },
+    {
+      "id": "G7_independent_review",
+      "name": "Independent security review",
+      "status": "BLOCKED",
+      "evidence": [
+        "docs/ENGINEERING_SECURITY_REVIEW.md is self-review only"
+      ]
+    },
+    {
+      "id": "G7_owners_custody",
+      "name": "Trust/key custody (encrypted at rest)",
+      "status": "PASS",
+      "tier": "local_operator",
+      "evidence": [
+        "lib/custody.js",
+        "IV/tag length refuse",
+        "CFP_REQUIRE_ENCRYPTION"
+      ]
+    },
+    {
+      "id": "G7_backup_restore",
+      "name": "Backup / restore drill",
+      "status": "PASS",
+      "tier": "local_operator",
+      "evidence": [
+        "cfp backup/restore",
+        "backup wipe restore test"
+      ]
+    },
+    {
+      "id": "G7_rolling_upgrade",
+      "name": "Rolling upgrade procedure",
+      "status": "PASS",
+      "tier": "local_operator",
+      "evidence": [
+        "cfp upgrade-dry-run",
+        "upgrade dry-run test",
+        "multi-instance NOT_CLAIMED"
+      ]
+    },
+    {
+      "id": "G7_slos",
+      "name": "Production SLOs",
+      "status": "PASS",
+      "tier": "local_operator",
+      "partial": "WAN_SLOs_NOT_MEASURED",
+      "evidence": [
+        "lib/metrics.js",
+        "cfp status metrics",
+        "SLO scaffolding test"
+      ]
+    },
+    {
+      "id": "G7_failure_drills",
+      "name": "Failure drills",
+      "status": "PASS",
+      "tier": "local_operator",
+      "evidence": [
+        "docs/PRODUCTION_RUNBOOK.md drill table; suite covers disconnect/revoke/UNKNOWN"
+      ]
+    },
+    {
+      "id": "GAP06_attestation",
+      "name": "Hardware TPM / GAP-06 attestation",
+      "status": "BLOCKED",
+      "software_seam": "PARTIAL",
+      "evidence": [
+        "lib/attestation.js SOFTWARE_OPERATOR_ATTESTATION_NOT_HARDWARE",
+        "CFP_REQUIRE_ATTESTATION fail-closed",
+        "TPM/hardware still BLOCKED"
+      ]
+    },
+    {
+      "id": "release_gate",
+      "name": "tools/check.js + FILES.sha256",
+      "status": "PASS",
+      "evidence": [
+        "npm run check / tools/check.js"
+      ]
+    },
+    {
+      "id": "hermit_regressions",
+      "name": "Selected HERMIT regressions",
+      "status": "PASS",
+      "evidence": [
+        "npm run test:hermit"
+      ]
+    }
+  ],
+  "required_for_production_go": [
+    "G0_source_identity",
+    "G1_terminal_bridge",
+    "G2_single_cell",
+    "G3_two_physical_hosts",
+    "G4_mobile_physical",
+    "G5_df_runtime",
+    "G6_continuous_services",
+    "G7_independent_review",
+    "G7_owners_custody",
+    "G7_backup_restore",
+    "G7_rolling_upgrade",
+    "G7_slos",
+    "G7_failure_drills",
+    "GAP06_attestation",
+    "release_gate",
+    "hermit_regressions"
+  ],
+  "required_for_local_operator_go": [
+    "G0_source_identity",
+    "G1_terminal_bridge",
+    "G2_single_cell",
+    "G7_owners_custody",
+    "G7_backup_restore",
+    "G7_failure_drills",
+    "release_gate",
+    "hermit_regressions"
+  ],
+  "remaining_blockers_for_g7_production_go": [
+    "Independent third-party security review",
+    "GAP-06 hardware attestation (TPM) replacing SOFTWARE_OPERATOR / OPERATOR_ENROLLED",
+    "G3 two-physical-host TLS drill (loopback-only done)",
+    "G4 physical mobile Safari/Chrome acceptance",
+    "G5 DF sealed member promotion on this host",
+    "G6 full GAP service adapters (esp. 07/13 policy authority)",
+    "Multi-instance rolling upgrade + WAN-measured SLOs",
+    "Real WAN / NAT / cloud ingress qualification"
+  ]
+}

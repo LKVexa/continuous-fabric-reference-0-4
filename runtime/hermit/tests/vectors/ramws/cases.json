@@ -1,0 +1,675 @@
+[
+  {
+    "name": "valid_example",
+    "expected_valid": true,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "negative_offset",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": -1,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "out_of_extent",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 129,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "boolean_length",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": true,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "oversized_integer",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 9223372036854775808,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "budget_exceeded",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 2097153,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "lossy_payload",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": false
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "unknown_field",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      },
+      "raw_pointer": 1234
+    }
+  },
+  {
+    "name": "missing_field",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "ram_executor",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "dram_cells",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "immutable_write",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "write"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "zero_generation",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 0,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "principal-example",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  },
+  {
+    "name": "empty_identity",
+    "expected_valid": false,
+    "descriptor": {
+      "Operator": {
+        "kind": "output",
+        "schema_version": "ramws.internal.v1"
+      },
+      "Buffers": [
+        {
+          "handle": "lease-example-01",
+          "generation": 1,
+          "offset": 0,
+          "length": 64,
+          "capacity": 128,
+          "access": "read"
+        }
+      ],
+      "Formats": {
+        "payload": "utf-8",
+        "wire_schema": "ramws.v1",
+        "lossless": true
+      },
+      "Budget": {
+        "scope": "session",
+        "reservation_bytes": 128,
+        "session_limit_bytes": 2097152
+      },
+      "Ownership": {
+        "principal_id": "",
+        "session_id": "session-example",
+        "server_epoch": "epoch-example",
+        "owner": "transport",
+        "mutability": "immutable"
+      },
+      "Completion": {
+        "fence_handle": "completion-example",
+        "release_policy": "last_local_consumer_complete"
+      },
+      "Quality": {
+        "payload_fidelity": "exact",
+        "ordered": true,
+        "oracle": "protocol+terminal-reference-v1"
+      },
+      "Backend": {
+        "profile": "LOCAL_VOLATILE",
+        "executor": "cpu",
+        "runtime_id": "unmeasured-example",
+        "plan_id": "plan-example"
+      }
+    }
+  }
+]

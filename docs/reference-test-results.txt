@@ -1,0 +1,21 @@
+# Reference suite results — Continuous Fabric Reference 0.4.2
+# Times in America/Los_Angeles (PT).
+
+## Before (0.4.1 Windows + donors)
+# tests 18 / pass 18 / fail 0 / skipped 0
+
+## After — Linux box (no donors) — 2026-09-23 ~16:01 PT
+node --test tests/*.test.js
+# tests 24
+# pass 18
+# fail 0
+# skipped 6
+# (donor-dependent skips are honest unbound evidence)
+
+## After — Windows qualification host + CFP_SOURCE_ROOT donors — 2026-09-23 ~16:03 PT
+node --test tests/fabric.test.js
+# tests 24
+# pass 24
+# fail 0
+# skipped 0
+# tools/check.js: ok (92 JS files, 94 hermit provenance, 135 manifest entries)
